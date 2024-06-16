@@ -28,15 +28,15 @@
         -	All the HTML Pages, CSS, Scripts, Images and Onsen UI Components are cached using Stale While Revalidate Strategy.
 
 # 2.	Web APIs used:-
-   *	Notification API
-        Used to show user the Notification whenever a Buy or Sell Transaction is made.
-    *	Screen Rotation API
-        Used to lock screen orientation to portrait. In case the rotation lock is not available, user will show a recommendation toast whenever device is rotated to landscape mode.
-    *	Geo Location API
-        Used to detect device’s location. This location is used to get country name required to only fetch Mutual Funds from user’s country.
-    *	Push Message API
-        Used to communicated sync event received by Service Worker to the main thread i.e. client app.
+*	Notification API
+    Used to show user the Notification whenever a Buy or Sell Transaction is made.
+*	Screen Rotation API
+    Used to lock screen orientation to portrait. In case the rotation lock is not available, user will show a recommendation toast whenever device is rotated to landscape mode.
+*	Geo Location API
+    Used to detect device’s location. This location is used to get country name required to only fetch Mutual Funds from user’s country.
+*	Push Message API
+    Used to communicated sync event received by Service Worker to the main thread i.e. client app.
 
 # 3.	Risks:-
-   *	Data about the Mutual Funds is very valuable and hence it is not easily available. Especially the free version provided by third party venders are extremely limited in terms of amount of useful data provided and number of free API calls.
-  *	Ensuring data integrity in case of any kind of failure while making a Buy or Sell Transaction is crucial. This requires us to limit some of the offline functionality such as seeing the offline transaction reflected in user’s Portfolio.
+*	Data about the Mutual Funds is very valuable and hence it is not easily available. Especially the free version provided by third party venders are extremely limited in terms of amount of useful data provided and number of free API calls.
+*	Ensuring data integrity in case of any kind of failure while making a Buy or Sell Transaction is crucial. This requires us to limit some of the offline functionality such as seeing the offline transaction reflected in user’s Portfolio.
