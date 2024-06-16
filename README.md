@@ -1,4 +1,4 @@
-# Prototype
+# Wireframe
 ![Invest](https://github.com/abhaymlimaye/mutual-fund_pwa/assets/32418776/9bd1a916-0c9a-446d-a3c0-8dd6e0c6a493)
 ![Portfolio](https://github.com/abhaymlimaye/mutual-fund_pwa/assets/32418776/c3199a3b-1c16-460a-ab83-100e77582a4b)
 ![Transactions](https://github.com/abhaymlimaye/mutual-fund_pwa/assets/32418776/a6edf827-3613-4c57-9325-8ca36e39c620)
@@ -7,12 +7,12 @@
 # 1.	Aim of the project is to make Mutual Fund Investing easy.
    * The app will allow users to buy a mutual fund, view existing investments and sell the investment.
    * The app will need 3 pages
-        - Invest
-            User will browse through a List of Mutual Funds. The Funds shown will be from the Country detected from device. User will make a Buy Transaction from this screen.
-        -	Portfolio
-            This will show the Funds user has already invested in. User will be able to make a Sell Transaction of a held fund from this screen.
-      	-	Transactions
-            All the Buy and Sell type of transaction will show up here. User will be redirected to this screen from Invest or Portfolio screen after making a purchase or a sell.
+    - Invest
+    User will browse through a List of Mutual Funds. The Funds shown will be from the Country detected from device. User will make a Buy Transaction from this screen.
+    -	Portfolio
+    This will show the Funds user has already invested in. User will be able to make a Sell Transaction of a held fund from this screen.
+    -	Transactions
+    All the Buy and Sell type of transaction will show up here. User will be redirected to this screen from Invest or Portfolio screen after making a purchase or a sell.
   *	The types of data needed:-
         -	List of Mutual Funds – Third party API twelvedata.com
         -	Country Name – Browser’s Geolocation API and geonames.org to get country name from latitude and longitude.
