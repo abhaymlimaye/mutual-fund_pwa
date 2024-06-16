@@ -4,8 +4,8 @@
 ![Transactions](https://github.com/abhaymlimaye/mutual-fund_pwa/assets/32418776/a6edf827-3613-4c57-9325-8ca36e39c620)
 
 # Vision
-1.	Aim of the project is to make Mutual Fund Investing easy.
-   a.	The app will allow users to buy a mutual fund, view existing investments and sell the investment.
+# 1.	Aim of the project is to make Mutual Fund Investing easy.
+   -- a.	The app will allow users to buy a mutual fund, view existing investments and sell the investment.
    b.	The app will need 3 pages
         i.	Invest
             User will browse through a List of Mutual Funds. The Funds shown will be from the Country detected from device. User will make a Buy Transaction from this screen.
@@ -27,7 +27,7 @@
         vi.	User will also get an indication about device being offline while making any Transaction with information that the data will be updated once online. 
         vii.	All the HTML Pages, CSS, Scripts, Images and Onsen UI Components are cached using Stale While Revalidate Strategy.
 
-2.	Web APIs used:-
+# 2.	Web APIs used:-
    a.	Notification API
         Used to show user the Notification whenever a Buy or Sell Transaction is made.
    b.	Screen Rotation API
@@ -37,6 +37,6 @@
    d.	Push Message API
         Used to communicated sync event received by Service Worker to the main thread i.e. client app.
 
-3.	Risks:-
+# 3.	Risks:-
    a.	Data about the Mutual Funds is very valuable and hence it is not easily available. Especially the free version provided by third party venders are extremely limited in terms of amount of useful data provided and number of free API calls.
    b.	Ensuring data integrity in case of any kind of failure while making a Buy or Sell Transaction is crucial. This requires us to limit some of the offline functionality such as seeing the offline transaction reflected in user’s Portfolio.
