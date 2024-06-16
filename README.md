@@ -5,27 +5,27 @@
 
 # Vision
 # 1.	Aim of the project is to make Mutual Fund Investing easy.
-   * The app will allow users to buy a mutual fund, view existing investments and sell the investment.
-   * The app will need 3 pages
-    - Invest
-    User will browse through a List of Mutual Funds. The Funds shown will be from the Country detected from device. User will make a Buy Transaction from this screen.
-    -	Portfolio
-    This will show the Funds user has already invested in. User will be able to make a Sell Transaction of a held fund from this screen.
-    -	Transactions
-    All the Buy and Sell type of transaction will show up here. User will be redirected to this screen from Invest or Portfolio screen after making a purchase or a sell.
-  *	The types of data needed:-
-        -	List of Mutual Funds – Third party API twelvedata.com
-        -	Country Name – Browser’s Geolocation API and geonames.org to get country name from latitude and longitude.
-        -	Portfolio – Firebase Realtime Database
-        -	Transactions – Firebase Realtime Database
-  *	Offline Mode
-        -	Latest list of Mutual Funds will be stored in IndexedDB whenever connection is available
-        -	Country Name will be stored in Local Storage whenever connection is available.
-        -	Portfolio items will be stored in IndexedDB. 
-        -	Already made Transactions will not be stored offline, however any new Transaction made when offline will be stored in IndexedDB
-        -	Whenever Sync event is triggered and connection is available, the Transactions from IndexedDB will be moved to FirebaseDB. Also, the Portfolio Items will be updated to reflect the transaction. This will ensure the Data Integrity of Portfolio Items.
-        -	User will also get an indication about device being offline while making any Transaction with information that the data will be updated once online. 
-        -	All the HTML Pages, CSS, Scripts, Images and Onsen UI Components are cached using Stale While Revalidate Strategy.
+* The app will allow users to buy a mutual fund, view existing investments and sell the investment.
+* The app will need 3 pages
+- Invest
+User will browse through a List of Mutual Funds. The Funds shown will be from the Country detected from device. User will make a Buy Transaction from this screen.
+-	Portfolio
+This will show the Funds user has already invested in. User will be able to make a Sell Transaction of a held fund from this screen.
+-	Transactions
+All the Buy and Sell type of transaction will show up here. User will be redirected to this screen from Invest or Portfolio screen after making a purchase or a sell.
+*	The types of data needed
+-	List of Mutual Funds: Third party API twelvedata.com
+-	Country Name: Browser’s Geolocation API and geonames.org to get country name from latitude and longitude.
+-	Portfolio: Firebase Realtime Database
+-	Transactions: Firebase Realtime Database
+*	Offline Mode
+-	Latest list of Mutual Funds will be stored in IndexedDB whenever connection is available
+-	Country Name will be stored in Local Storage whenever connection is available.
+-	Portfolio items will be stored in IndexedDB. 
+-	Already made Transactions will not be stored offline, however any new Transaction made when offline will be stored in IndexedDB
+-	Whenever Sync event is triggered and connection is available, the Transactions from IndexedDB will be moved to FirebaseDB. Also, the Portfolio Items will be updated to reflect the transaction. This will ensure the Data Integrity of Portfolio Items.
+-	User will also get an indication about device being offline while making any Transaction with information that the data will be updated once online. 
+-	All the HTML Pages, CSS, Scripts, Images and Onsen UI Components are cached using Stale While Revalidate Strategy.
 
 # 2.	Web APIs used:-
 *	Notification API
