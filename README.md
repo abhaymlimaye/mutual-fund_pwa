@@ -7,7 +7,7 @@
 # 1.	Aim of the project is to make Mutual Fund Investing easy.
    * The app will allow users to buy a mutual fund, view existing investments and sell the investment.
    * The app will need 3 pages
-        i.	Invest
+        * Invest
             User will browse through a List of Mutual Funds. The Funds shown will be from the Country detected from device. User will make a Buy Transaction from this screen.
         ii.	Portfolio
             This will show the Funds user has already invested in. User will be able to make a Sell Transaction of a held fund from this screen.
