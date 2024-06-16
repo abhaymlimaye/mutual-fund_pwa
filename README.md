@@ -1,12 +1,11 @@
 # Prototype
-![Portfolio](https://github.com/abhaymlimaye/mutual-fund_pwa/assets/32418776/1d081c85-496b-4280-aeb8-33693fef9d49)
-![Invest](https://github.com/abhaymlimaye/mutual-fund_pwa/assets/32418776/0714d482-ae40-4829-86f4-b8c7c035130e)
-![Transactions](https://github.com/abhaymlimaye/mutual-fund_pwa/assets/32418776/705946b2-aca5-4a97-af70-533aec43f997)
+![Invest](https://github.com/abhaymlimaye/mutual-fund_pwa/assets/32418776/9bd1a916-0c9a-446d-a3c0-8dd6e0c6a493)
+![Portfolio](https://github.com/abhaymlimaye/mutual-fund_pwa/assets/32418776/c3199a3b-1c16-460a-ab83-100e77582a4b)
+![Transactions](https://github.com/abhaymlimaye/mutual-fund_pwa/assets/32418776/335ca5ca-22cc-4b97-98b4-95ec52ad4e2e)
 
- 
 # Vision
 1.	Aim of the project is to make Mutual Fund Investing easy.
-    a.	The app will allow users to buy a mutual fund, view existing investments and sell the investment.
+   -- a.	The app will allow users to buy a mutual fund, view existing investments and sell the investment.
     b.	The app will need 3 pages
         i.	Invest
             User will browse through a List of Mutual Funds. The Funds shown will be from the Country detected from device. User will make a Buy Transaction from this screen.
