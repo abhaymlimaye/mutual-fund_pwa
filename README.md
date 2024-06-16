@@ -1,7 +1,7 @@
 # Prototype
 ![Invest](https://github.com/abhaymlimaye/mutual-fund_pwa/assets/32418776/9bd1a916-0c9a-446d-a3c0-8dd6e0c6a493)
 ![Portfolio](https://github.com/abhaymlimaye/mutual-fund_pwa/assets/32418776/c3199a3b-1c16-460a-ab83-100e77582a4b)
-![Transactions](https://github.com/abhaymlimaye/mutual-fund_pwa/assets/32418776/335ca5ca-22cc-4b97-98b4-95ec52ad4e2e)
+![Transactions](https://github.com/abhaymlimaye/mutual-fund_pwa/assets/32418776/a6edf827-3613-4c57-9325-8ca36e39c620)
 
 # Vision
 1.	Aim of the project is to make Mutual Fund Investing easy.
