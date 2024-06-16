@@ -9,9 +9,9 @@
    * The app will need 3 pages
         - Invest
             User will browse through a List of Mutual Funds. The Funds shown will be from the Country detected from device. User will make a Buy Transaction from this screen.
-     -	Portfolio
+        -	Portfolio
             This will show the Funds user has already invested in. User will be able to make a Sell Transaction of a held fund from this screen.
-         -	Transactions
+      	-	Transactions
             All the Buy and Sell type of transaction will show up here. User will be redirected to this screen from Invest or Portfolio screen after making a purchase or a sell.
   *	The types of data needed:-
         -	List of Mutual Funds – Third party API twelvedata.com
