@@ -1,0 +1,83 @@
+.w-100 {
+    width: 100%!important;
+}
+.text-center {
+    text-align: center!important;
+}
+.d-flex {
+    display: flex!important;
+}
+.justify-content-center {
+    justify-content: center!important;
+}
+.justify-content-between {
+    justify-content: space-between!important;
+}
+.align-items-center {
+    align-items: center!important;
+}
+.align-items-end {
+    align-items: flex-end!important;
+}
+#headerImage{
+    height: 60%; padding: .5rem;
+}
+.text-performance {
+    color: darkcyan!important;
+    font-weight: bold!important;
+}
+.text-risk {
+    color: orange!important;
+    font-weight: bold!important;
+}
+.text-amount {
+    color: darkgoldenrod!important;
+    font-weight: bold!important;
+}
+.text-buy {
+    color: darkgreen!important;
+}
+.text-sell {
+    color: darkred!important;
+}
+.text-secondary {
+    color: slategray!important;
+}
+.text-tertiary {
+    color: gray!important;
+}
+.text-small {
+    font-size: small!important;
+}
+.p-1rem {
+    padding: 1rem!important;
+}
+.p-05rem {
+    padding: .5rem!important;
+}
+.m-0 {
+    margin: 0!important;
+}
+#pageInvest, #pagePortfolio, #pageTransactions {
+    overflow-y: auto;
+    background-color: #efeff4!important;
+}
+.input-error {
+    color: red!important;
+    display: none;
+    font-size: smaller!important;
+    margin-top: .5rem;
+}
+.indicatorOffline{
+    display: none; 
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    color: slategray;
+    background-color: aliceblue;
+    font-size: smaller;
+    font-weight: 500;
+    text-align: center;
+    padding: .5rem;
+}

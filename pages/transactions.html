@@ -1,0 +1,85 @@
+<ons-page >
+
+    <div class="indicatorOffline">
+        ⓘ You're Offline. New transactions will be processed once online.
+    </div>
+
+    <div id="pageTransactions">
+        <div class="d-flex justify-content-center w-100">
+            <h6 class="text-tertiary">Loading...</h6>
+        </div>
+    </div>
+
+    <script>
+        const pageTransactions = document.getElementById("pageTransactions");
+        const trxStyles = {
+            "BUY": {
+                textClass: "text-buy", 
+                iconName: "fa-shopping-cart",
+            },
+            "SELL": {
+                textClass: "text-sell",
+                iconName: "fa-wallet",
+            },
+        }
+
+        refreshAllTransactions = () => {
+            masterDb.getAllTransactions((response, error) => {
+                if(error) {
+                    renderNoTransactions("Something went wrong!")
+                    return;
+                }
+                response?.length !== 0 ? renderAllTransactions(response) : renderNoTransactions("No transactions found") 
+            });
+        }   
+        
+        refreshAllTransactions();
+
+        renderAllTransactions = transactions => {
+            if(!transactions) return;
+
+            let tilesHTML = "";
+            transactions.forEach(transaction => {
+                tilesHTML += getTransactionTile(transaction) 
+            });
+            pageTransactions.innerHTML = "<ons-list>" + tilesHTML + "</ons-list>";
+        }
+
+        getTransactionTile = transaction => {
+            const tileHtml = `
+            <ons-list-header> ${transaction.fundName} </ons-list-header>
+
+            <ons-list-item> 
+                <div class="center"> Amount: </div>
+                <div class="right text-amount">
+                    ${transaction.amount} &nbsp;&nbsp;
+                    <ons-icon icon="fa-coins" class="text-amount"></ons-icon>
+                </div>
+            </ons-list-item>
+
+            <ons-list-item>        
+                <div class="center"> Order type: </div>
+                <div class="right">
+                    <span class=${trxStyles[transaction.transactionType].textClass}> ${transaction.transactionType} </span> &nbsp;&nbsp;
+                    <ons-icon icon=${trxStyles[transaction.transactionType].iconName} class=${trxStyles[transaction.transactionType].textClass}></ons-icon>            
+                </div>
+            </ons-list-item>
+
+            <ons-list-item>        
+                <div class="center"> Order ID: </div>
+                <div class="right text-secondary"> ${transaction.transactionId || "Queued for processing"} </div>
+            </ons-list-item>
+            `
+            return tileHtml;
+        }
+
+        renderNoTransactions = message => {
+            pageTransactions.innerHTML = `
+                <div class="d-flex justify-content-center p-1rem w-100 text-secondary">
+                    <h6>${message}</h6>
+                </div>
+                `
+        }
+    </script>
+    
+</ons-page>

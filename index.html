@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Own Stylesheet -->
+        <link rel="stylesheet" type="text/css" href="/css/styles.css">
+
+        <!--Onsen UI-->
+        <link rel="stylesheet" href="/css/onsen-ui/onsenui.min.css">
+        <link rel="stylesheet" href="/css/onsen-ui/onsen-css-components.min.css">
+        <link rel="stylesheet" href="/css/onsen-ui/onsenui-core.min.css">
+        <script src="/js/onsenui.min.js"></script>
+
+        <!-- Manifest -->
+        <link rel="manifest" href="/manifest.json">
+
+        <!-- Favicon -->
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+        <!-- Viewport -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" >
+
+        <!-- Theme -->
+        <meta name="theme-color" content="#448fd9">
+
+        <!-- Apple Device tags -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="apple-mobile-web-app-title" content="Easy Mutual Funds">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+        <!-- Firebase Scripts -->
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+        <title>Easy Mutual Funds</title>
+    </head>
+    
+    <body>
+        <ons-page>       
+            <ons-toolbar>
+              <div class="left"><img src="/images/icon-192.png" id="headerImage"></div>
+              <div class="center">Easy Mutual Funds</div>
+              <div class="right">
+                  <span class="text-secondary text-small" id="headerCountryText"> </span> 
+                  <ons-icon icon="fa-globe" class="text-secondary text-small"></ons-icon>    
+                   &nbsp;&nbsp; 
+              </div>
+              
+            </ons-toolbar>
+          
+            <ons-tabbar id="mainTabBar" swipeable position="auto">
+              <ons-tab page="pages/invest.html" label="Invest" icon="fa-money-bill" active></ons-tab>
+              <ons-tab page="pages/portfolio.html" label="Portfolio" icon="fa-briefcase"></ons-tab>
+              <ons-tab page="pages/transactions.html" label="Transactions" icon="fa-receipt"></ons-tab>
+            </ons-tabbar>          
+        </ons-page>
+        
+        <script src="js/index.js"></script>
+        <script src="js/data-sources/apis.js"></script>
+        <script src="js/data-sources/firebaseDb.js"></script>
+        <script src="js/data-sources/indexedDb.js"></script>
+        <script src="js/data-sources/masterDb.js"></script>
+        <script src="js/functions.js"></script>
+        
+    </body>
+</html>

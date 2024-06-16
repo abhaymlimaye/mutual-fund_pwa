@@ -1,0 +1,76 @@
+<ons-page id="pageInvest">
+
+    <div class="d-flex justify-content-center w-100">
+        <h6 class="text-tertiary">Loading...</h6>
+    </div>
+
+    <script>
+        const pageInvest = document.getElementById("pageInvest");
+        const inputBuyIdPrefix = "inputBuyAmount-";
+        const divBuyErrorIdPrefix = "divBuyError-";
+
+        masterDb.getAllFunds()
+            .then(funds => renderAllFunds(funds))
+            .catch(() => renderNoFunds());
+
+        handleBuyClick = (fundId, fundName) => {
+            const amount = validateAmountInput(inputBuyIdPrefix + fundId, divBuyErrorIdPrefix + fundId)   
+            amount && processBuyOrSell(fundId, fundName, "BUY", amount);     
+        }
+        
+        renderAllFunds = funds => {
+            headerCountryTextElement.innerText = localStorage.getItem('countryName') || "World"; //set header country name if available
+            pageInvest.innerHTML = "";
+            funds && funds.forEach(fund => renderFundTile(fund));
+        }
+
+        renderFundTile = fund => {
+            pageInvest.innerHTML += `
+                <ons-card>
+
+                    <ons-list-item expandable>
+                        <h4> ${fund.name} </h4> 
+                        <div class="expandable-content">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex align-items-center">
+                                    <ons-icon icon="fa-coins" class="text-tertiary"></ons-icon> &nbsp;&nbsp;
+                                    <ons-input id="${inputBuyIdPrefix + fund.symbol}" modifier="transparent" type="number" min="10" placeholder="Type Amount" float required></ons-input>
+                                </div>
+                                <ons-toolbar-button onclick="handleBuyClick('${fund.symbol}', '${fund.name}')">BUY</ons-toolbar-button>
+                            </div>
+                            <div class="input-error" id=${divBuyErrorIdPrefix + fund.symbol}> </div>
+                        </div>
+                    </ons-list-item>
+
+                    <div class="content p-1rem">
+                        <b class="text-secondary"> Managed by: ${fund.fund_family || 'NA'} </b>
+
+                        <div class="d-flex justify-content-between">
+                            <div class="d-flex align-items-end">
+                                <p>Performance:</p> &nbsp;&nbsp;
+                                <h3 class=${fund.performance_rating ? 'text-performance' : 'text-tertiary'}> ${fund.performance_rating || 'NA'} </h3>
+
+                            </div>
+                            <div class="d-flex align-items-end">
+                                <p>Risk:</p> &nbsp;&nbsp;
+                                <h3 class=${fund.risk_rating ? 'text-risk' : 'text-tertiary'}> ${fund.risk_rating || 'NA'} </h3>
+                            </div>
+                        </div>        
+                    </div>
+
+                </ons-card>
+            `
+        }
+
+        renderNoFunds = () => {
+            pageInvest.innerHTML = `
+                <div class="d-flex justify-content-center p-1rem w-100 text-secondary">
+                    <h6>Something went wrong!</h6>
+                </div>
+                `
+        }
+    </script>
+</ons-page>
+
+
+
