@@ -5,20 +5,20 @@
 
 # Vision
 # 1.	Aim of the project is to make Mutual Fund Investing easy.
-   * a.	The app will allow users to buy a mutual fund, view existing investments and sell the investment.
-   b.	The app will need 3 pages
+   * The app will allow users to buy a mutual fund, view existing investments and sell the investment.
+   * The app will need 3 pages
         i.	Invest
             User will browse through a List of Mutual Funds. The Funds shown will be from the Country detected from device. User will make a Buy Transaction from this screen.
         ii.	Portfolio
             This will show the Funds user has already invested in. User will be able to make a Sell Transaction of a held fund from this screen.
         iii.	Transactions
             All the Buy and Sell type of transaction will show up here. User will be redirected to this screen from Invest or Portfolio screen after making a purchase or a sell.
-   c.	The types of data needed:-
+  *	The types of data needed:-
         i.	List of Mutual Funds – Third party API twelvedata.com
         ii.	Country Name – Browser’s Geolocation API and geonames.org to get country name from latitude and longitude.
         iii.	Portfolio – Firebase Realtime Database
         iv.	Transactions – Firebase Realtime Database
-   d.	Offline Mode
+  *	Offline Mode
         i.	Latest list of Mutual Funds will be stored in IndexedDB whenever connection is available
         ii.	Country Name will be stored in Local Storage whenever connection is available.
         iii.	Portfolio items will be stored in IndexedDB. 
